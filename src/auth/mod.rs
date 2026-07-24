@@ -1,6 +1,8 @@
 use soroban_sdk::{Address, Env, Map, Vec};
 use crate::{ContractData, ContractError, DATA_KEY, SIGNERS_KEY, VALIDATOR_STATE_KEY};
 
+pub mod dispatcher;
+
 const ACTIVE: u32 = 1 << 1;
 
 fn get_validator_state(env: &Env, addr: &Address) -> u32 {
